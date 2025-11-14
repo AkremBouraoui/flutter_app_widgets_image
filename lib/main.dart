@@ -17,7 +17,33 @@ class MainApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.blueAccent,
         ),
-        body: Center(child :Text('Bienvenue dans cet atelier')),
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Text(
+                'Bienvenue a Constantine!',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
+                ),
+              ),
+              SizedBox(height: 20),
+              Image.network(
+                'https://mediaim.expedia.com/destination/2/a1e165910f1d99f3415a7a5dea97c034.jpg',
+                width: 200,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Constantine, la ville des ponts suspendus et dun riche patrimoine historique',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
+        ),
         ),
       );
   }
